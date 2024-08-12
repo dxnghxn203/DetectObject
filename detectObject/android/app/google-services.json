@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "629360479250",
+    "firebase_url": "https://camera-e454d-default-rtdb.firebaseio.com",
+    "project_id": "camera-e454d",
+    "storage_bucket": "camera-e454d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629360479250:android:63b9d55c2128b2c78a9ccb",
+        "android_client_info": {
+          "package_name": "com.example.bt_camera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4vzGp7-Q0rxWcUUkORZ6gyfq_uqwx_YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "629360479250-7v8jrq92sk4mk3hvsuuuo09rm9au1co4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cameraApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629360479250:android:735423dc45fb45738a9ccb",
+        "android_client_info": {
+          "package_name": "com.example.camera_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4vzGp7-Q0rxWcUUkORZ6gyfq_uqwx_YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "629360479250-7v8jrq92sk4mk3hvsuuuo09rm9au1co4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cameraApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629360479250:android:af4f105484b515388a9ccb",
+        "android_client_info": {
+          "package_name": "com.xample.camera_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4vzGp7-Q0rxWcUUkORZ6gyfq_uqwx_YM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629360479250-48a6suuuml0gv16g3miekph60ceeugj8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "629360479250-7v8jrq92sk4mk3hvsuuuo09rm9au1co4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cameraApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
