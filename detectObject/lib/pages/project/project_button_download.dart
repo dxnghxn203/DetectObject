@@ -28,6 +28,7 @@ class _PredictPageWidgetState extends State<ButtonDownload> {
       DownloadAssetsController();
 
   String message = "Download";
+  bool state = true;
 
   @override
   initState() {
@@ -64,7 +65,7 @@ class _PredictPageWidgetState extends State<ButtonDownload> {
       minWidth: MediaQuery.of(context).size.width * .60,
       child: MaterialButton(
         onPressed: () async {
-          if (!widget.state) {
+          if (state) {
             firebaseRepository
                 .getModelsStorage(widget.modelsPredict.name)
                 .then((url) {
@@ -99,6 +100,7 @@ class _PredictPageWidgetState extends State<ButtonDownload> {
           onProgress: (progressValue) {
             if (mounted) {
               setState(() {
+                state = false;
                 message =
                     'Downloading...(${(progressValue * 100).toStringAsFixed(2)}%)';
               });
@@ -116,7 +118,7 @@ class _PredictPageWidgetState extends State<ButtonDownload> {
 
             if (mounted) {
               setState(() {
-                // widget.state = true;
+                state = true;
                 message = "Downloaded!";
                 widget.downloaded!(true);
               });

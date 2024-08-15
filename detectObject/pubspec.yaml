@@ -52,6 +52,7 @@ dependencies:
   image: ^4.2.0
   flutter_exif_rotation: ^0.5.1
   archive: ^3.6.1
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:

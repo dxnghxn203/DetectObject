@@ -238,7 +238,7 @@ class _ItemPageWidgetState extends State<DetailImage> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
                     child: Stack(
-                      alignment: AlignmentDirectional.center,
+                      // alignment: AlignmentDirectional.center,
                       children: [
                         Image.file(File(widget.pathInput)),
                         Image.file(File(widget.pathOuput)),

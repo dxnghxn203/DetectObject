@@ -153,8 +153,8 @@ class FileModel {
     String path = "${appDocDir.path}$folder";
     Map<String, String> map = {};
 
-    if (!File(path).existsSync()) {
-      await Directory(path).create();
+    if (!await Directory(path).exists()) {
+      await Directory(path).create(recursive: true);
     }
 
     for (final file in archive) {
@@ -175,8 +175,8 @@ class FileModel {
     var path = "${appDocDir.path}/assets/models";
     Map<String, String> map = {};
 
-    if (!File(path).existsSync()) {
-      await Directory(path).create();
+    if (!await Directory(path).exists()) {
+      await Directory(path).create(recursive: true);
     }
     for (FileSystemEntity item in io.Directory(path).listSync()) {
       if (item.path.contains('?')) {
@@ -191,14 +191,15 @@ class FileModel {
     var path = "${appDocDir.path}/assets/models";
     Map<String, String> map = {};
 
-    if (!File(path).existsSync()) {
-      await Directory(path).create();
+    if (!await Directory(path).exists()) {
+      await Directory(path).create(recursive: true);
     }
+
     for (FileSystemEntity item in io.Directory(path).listSync()) {
-      if (item.path.contains('?')) {
-        String newName = (item.path.split("%2F").last).split("?").first;
-        // item.rename("$path/$newName.zip");
-      }
+      // if (item.path.contains('?')) {
+      //   String newName = (item.path.split("%2F").last).split("?").first;
+      //   // item.rename("$path/$newName.zip");
+      // }
 
       String key = (item.path.split("/").last).split(".").first;
 

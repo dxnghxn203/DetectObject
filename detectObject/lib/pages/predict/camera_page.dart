@@ -12,6 +12,7 @@ import 'package:camera_app/pages/predict/result_image/result_image.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter_exif_rotation/flutter_exif_rotation.dart';
+import 'package:image_picker/image_picker.dart';
 
 class BodyCameraPage extends StatefulWidget {
   final List<CameraDescription> camera;
@@ -136,6 +137,30 @@ class _BodyCameraPageState extends State<BodyCameraPage> {
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+                    child: IconButton(
+                      onPressed: () {
+                        // _takePicture();
+                        _getImage();
+                      },
+                      icon: const Icon(
+                        Icons.perm_media_outlined,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ],
       ),
       floatingActionButton: PredictOptionModelPage(
@@ -150,6 +175,34 @@ class _BodyCameraPageState extends State<BodyCameraPage> {
 
   _buildPredictSettings() {
     return PredictSettingsPage(predictSettingsModel: _predictSettingsModel);
+  }
+
+  _getImage() async {
+    if (_pathModels.isEmpty) {
+      _showDialogNotChooseModel();
+    } else {
+      try {
+        int newsizeW = _key.currentContext!.size!.width.toInt();
+        int newsizeH = _key.currentContext!.size!.height.toInt();
+        final XFile? image =
+            await ImagePicker().pickImage(source: ImageSource.gallery);
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ResultImagePage(
+              file: image!.path,
+              predictSettingsModel: _predictSettingsModel,
+              pathModel: _pathModels,
+              width: newsizeW,
+              height: newsizeH,
+            ),
+          ),
+        );
+      } catch (e) {
+        print(e);
+      }
+    }
   }
 
   late final GlobalKey _key = GlobalKey();
