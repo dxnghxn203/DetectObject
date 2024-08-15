@@ -1,4 +1,0 @@
-
-plus = "➕"
-minus = "➖"
-wastebasket ="🗑️"
